@@ -45,5 +45,10 @@ exports.config = {
       joinTo: 'javascripts/app.js'
     }
   },
-  framework: 'backbone'
+  framework: 'backbone',
+  plugins: {
+    autoReload: {
+      disabled: true // set to false to make magic happen
+    }
+  }
 };
