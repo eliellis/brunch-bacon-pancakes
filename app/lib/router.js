@@ -6,6 +6,7 @@ module.exports = Backbone.Router.extend({
     },
 
     home: function() {
-        $('body').html(application.homeView.render().el);
+        var homeView = new application.HomeView();
+        application.AppView.showView(homeView);
     }
 });
