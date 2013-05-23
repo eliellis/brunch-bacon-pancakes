@@ -4,7 +4,7 @@ require('lib/view_helper');
 module.exports = Backbone.View.extend({
 
     initialize: function(){
-        this.render = _.bind(this.render, this);
+        _.bindAll(this, "render");
     },
 
     template: function(){},
@@ -16,6 +16,14 @@ module.exports = Backbone.View.extend({
         return this;
     },
 
-    afterRender: function(){}
+    afterRender: function(){},
+
+    close: function(){
+        this.remove();
+        this.unbind();
+        if (this.onClose){
+            this.onClose();
+        }
+    }
 
 });
