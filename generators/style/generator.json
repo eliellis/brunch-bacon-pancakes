@@ -1,0 +1,9 @@
+{
+  "files": [
+    {
+      "from": "style.less.hbs",
+      "to": "app/views/lesses/{{name}}.styl"
+    }
+  ],
+  "dependencies": []
+}

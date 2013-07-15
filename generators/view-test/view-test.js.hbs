@@ -1,0 +1,7 @@
+var {{#camelize}}{{name}}{{/camelize}}View = require('views/{{name}}-view');
+
+describe('{{#camelize}}{{name}}{{/camelize}}View', function(){
+	beforeEach(function(done){
+		this.view = new {{#camelize}}{{name}}{{/camelize}}View();
+	});
+});

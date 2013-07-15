@@ -1,0 +1,6 @@
+var View = require('views/base/view');
+var template = require('views/templates/{{name}}');
+
+var {{#camelize}}{{name}}{{/camelize}} = module.exports = View.extend({
+	template: template
+});
