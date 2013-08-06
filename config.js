@@ -7,11 +7,12 @@ exports.config = {
       defaultExtension: 'js',
       joinTo: {
         'javascripts/app.js': /^app/,
-        'javascripts/vendor.js': /^vendor/
+        'javascripts/vendor.js': /^(bower_components|vendor)/,
+        'test/javascripts/test.js': /^test[\\/](?!vendor)/,
+        'test/javascripts/test-vendor.js': /^test[\\/]vendor/,
       },
       order: {
-        before:
-        [
+        before: [
           'vendor/scripts/console-helper.js',
           'vendor/scripts/jquery-1.9.1.js',
           'vendor/scripts/lodash.underscore.js',
@@ -30,14 +31,25 @@ exports.config = {
           'vendor/scripts/bootstrap/bootstrap-scrollspy.js',
           'vendor/scripts/bootstrap/bootstrap-tab.js',
           'vendor/scripts/bootstrap/bootstrap-typeahed.js'
-          ]
+        ],
+        after: [
+          'test/vendor/scripts/test-helper.js'
+        ]
       }
     },
     stylesheets: {
       defaultExtension: 'less',
-      joinTo: 'stylesheets/app.css',
+      joinTo: {
+        'stylesheets/app.css': /^(?!test)/,
+        'test/stylesheets/test.css': /^test/
+      },
       order: {
-        before: ['vendor/styles/bootstrap/bootstrap.less']
+        before: [
+          'vendor/styles/bootstrap/bootstrap.less'
+        ],
+        after: [
+          'vendor/styles/helpers.css'
+        ]
       }
     },
     templates: {
@@ -46,9 +58,7 @@ exports.config = {
     }
   },
   framework: 'backbone',
-  plugins: {
-    autoReload: {
-      disabled: true // set to false to make magic happen
-    }
+  server: {
+    path: '../server/index.js'
   }
 };
