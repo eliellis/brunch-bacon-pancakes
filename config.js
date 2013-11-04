@@ -13,24 +13,18 @@ exports.config = {
       },
       order: {
         before: [
-          'vendor/scripts/console-helper.js',
-          'vendor/scripts/jquery-1.9.1.js',
-          'vendor/scripts/lodash.underscore.js',
-          'vendor/scripts/backbone-1.0.0.js',
-          'vendor/scripts/backbone-mediator.js',
-          'vendor/scripts/bootstrap/bootstrap-tooltip.js',
-          'vendor/scripts/bootstrap/bootstrap-transition.js',
-          'vendor/scripts/bootstrap/bootstrap-affix.js',
-          'vendor/scripts/bootstrap/bootstrap-alert.js',
-          'vendor/scripts/bootstrap/bootstrap-button.js',
-          'vendor/scripts/bootstrap/bootstrap-carousel.js',
-          'vendor/scripts/bootstrap/bootstrap-collapse.js',
-          'vendor/scripts/bootstrap/bootstrap-dropdown.js',
-          'vendor/scripts/bootstrap/bootstrap-modal.js',
-          'vendor/scripts/bootstrap/bootstrap-popover.js',
-          'vendor/scripts/bootstrap/bootstrap-scrollspy.js',
-          'vendor/scripts/bootstrap/bootstrap-tab.js',
-          'vendor/scripts/bootstrap/bootstrap-typeahed.js'
+          'vendor/scripts/bootstrap/tooltip.js',
+          'vendor/scripts/bootstrap/transition.js',
+          'vendor/scripts/bootstrap/affix.js',
+          'vendor/scripts/bootstrap/alert.js',
+          'vendor/scripts/bootstrap/button.js',
+          'vendor/scripts/bootstrap/carousel.js',
+          'vendor/scripts/bootstrap/collapse.js',
+          'vendor/scripts/bootstrap/dropdown.js',
+          'vendor/scripts/bootstrap/modal.js',
+          'vendor/scripts/bootstrap/popover.js',
+          'vendor/scripts/bootstrap/scrollspy.js',
+          'vendor/scripts/bootstrap/tab.js'
         ],
         after: [
           'test/vendor/scripts/test-helper.js'
